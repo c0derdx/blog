@@ -42,7 +42,12 @@ app.get("/compose",function(req,res) {
 });
 
 app.post("/compose",function(req,res){
-  console.log(req.body.post);
+  let post = {
+      postTitle: req.body.postTitle,
+      postBody: req.body.postBody
+  }
+  
+  console.log(post);
 });
 
 app.listen(3000, function() {
